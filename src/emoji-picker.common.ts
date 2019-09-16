@@ -1,15 +1,16 @@
-import { EmojiPicker as EmojiPickerDefinition } from "./emoji-picker";
+import { EmojiPicker as EmojiPickerDefinition, EmojiLabel as EmojiLabelDefinition } from "./emoji-picker";
 import { View, Style, Property, CssProperty, isIOS } from "tns-core-modules/ui/core/view";
 
-export const popupProperty = new Property<EmojiPickerBase, any>({ name: "popup", defaultValue: null });
 
+export const textProperty = new Property<EmojiLabelBase, string>({ name: "text", defaultValue: ""});
 
 export abstract class EmojiPickerBase extends View implements EmojiPickerDefinition {
-    public static tapEvent = "tap";
+}
+
+export abstract class EmojiLabelBase extends View implements EmojiLabelDefinition {
     text: string;
 }
 
 export let com: any;
 
-// Defines 'text' property on MyButtonBase class.
-popupProperty.register(EmojiPickerBase);
+textProperty.register(EmojiLabelBase);

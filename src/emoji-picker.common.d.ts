@@ -1,9 +1,11 @@
-import { EmojiPicker as EmojiPickerDefinition } from "./emoji-picker";
-import { View, Style, Property, CssProperty } from "tns-core-modules/ui/core/view";
-export declare const textProperty: Property<EmojiPickerBase, string>;
-export declare const myOpacityProperty: CssProperty<Style, number>;
+import { EmojiPicker as EmojiPickerDefinition, EmojiLabel as EmojiLabelDefinition } from "./emoji-picker";
+import { View, Style, Property, CssProperty, isIOS } from "tns-core-modules/ui/core/view";
+
+
 export declare abstract class EmojiPickerBase extends View implements EmojiPickerDefinition {
-    static tapEvent: string;
+   
+}
+export declare abstract class EmojiLabelBase extends View implements EmojiLabelDefinition {
     text: string;
 }
 export declare let com: any;
