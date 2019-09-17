@@ -11,7 +11,30 @@ As this plugin is currently in developement screenshots will be added later this
 Install the plugin using `tns plugin add nativescript-emoji-picker`
 
 ## Usage 
-ToDo
+### How does it work?
+This plugin will give you two elements, `EmojiPicker` and `EmojiLabel`. The first one will give you a editable textfield (very similar to the NativeScript TextField) and the second one is a label (similar to NativeScript Label), which wll display your Emojis in the text correctly.
+
+### NativeScript Core:
+Define the namespace
+```xml
+<Page class="page"
+    loaded="pageLoaded"
+    navigatingTo="onNavigatingTo" 
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+    xmlns:ns="nativescript-emoji-picker">
+```
+Use the plugin:
+```
+<ns:EmojiPicker id="myEmojiPicker"></ns:EmojiPicker>
+<ns:EmojiLabel id="myEmojiLabel"></ns:EmojiLabel>
+```
+ 
+More info will follow soon, until then be sure to check out the demo and demo-angular projects!
+
+### Angular Version:
+
+
+
 ## API
 
 ToDo
