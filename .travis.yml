@@ -13,7 +13,7 @@ matrix:
       language: node_js 
       node_js: "10"
       jdk: oraclejdk8
-      script: cd src && npm run build && cd ../demo && npm i && tns build ios --bundle --env.uglify
+      script: - pod repo update && cd src && npm run build && cd ../demo && npm i && tns build ios --bundle --env.uglify
     - language: android
       os: linux
       env:
@@ -38,7 +38,7 @@ matrix:
       node_js: "10"
       jdk: oraclejdk8
       script: 
-        - cd src && npm i && npm run tsc && cd ../demo && tns build ios
+        - - pod repo update && cd src && npm i && npm run tsc && cd ../demo && tns build ios
     - os: linux
       language: android
       dist: precise
