@@ -27,3 +27,9 @@ EmojiLabel {
     text-align: center;
     font-size: 20;
 }
+
+EmojiPicker {
+    padding: 30;
+    color: green;
+    margin: 20;
+}

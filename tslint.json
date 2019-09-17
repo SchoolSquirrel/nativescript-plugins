@@ -6,7 +6,8 @@
     "rules": {
         "no-var-requires": false,
         "triple-equals": false,
-        "max-classes-per-file": false
+        "max-classes-per-file": false,
+        "no-bitwise": false
     },
     "rulesDirectory": [],
     "linterOptions": {
