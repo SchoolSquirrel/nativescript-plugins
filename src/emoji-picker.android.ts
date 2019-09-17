@@ -1,20 +1,19 @@
-import { EmojiPickerBase, EmojiLabelBase, textProperty } from "./emoji-picker.common";
+import { booleanConverter, CSSType, TextBase, WhiteSpace, whiteSpaceProperty } from "tns-core-modules/ui/text-base";
 import { EmojiLabel as EmojiLabelDefinition } from ".";
-import { TextBase, WhiteSpace, whiteSpaceProperty, booleanConverter, CSSType } from "tns-core-modules/ui/text-base";
+import { EmojiLabelBase, EmojiPickerBase, textProperty } from "./emoji-picker.common";
 export * from "tns-core-modules/ui/text-base";
 
 declare const com: any;
 
-
 @CSSType("EmojiPicker")
 export class EmojiPicker extends EmojiPickerBase {
-    nativeView: any;
-    emojiPopup: any;
+    public nativeView: any;
+    public emojiPopup: any;
 
     /**
      * Creates new native button.
      */
-    public createNativeView(): Object {
+    public createNativeView(): object {
         // @ts-ignore
         com.vanniktech.emoji.EmojiManager.install(new com.vanniktech.emoji.ios.IosEmojiProvider());
 
@@ -23,24 +22,22 @@ export class EmojiPicker extends EmojiPickerBase {
 
         this.nativeView = new com.vanniktech.emoji.EmojiEditText(this._context);
 
-
         const rootView = this.nativeView.getRootView();
-
 
         this.emojiPopup = com.vanniktech.emoji.EmojiPopup.Builder.fromRootView(rootView).build(this.nativeView);
         return this.nativeView;
     }
-    initNativeView(): void {
-        (<any>this.nativeView).owner = this;
+    public initNativeView(): void {
+        ( this.nativeView as any).owner = this;
         super.initNativeView();
     }
 
-    togglePopup(): void {
+    public togglePopup(): void {
         this.emojiPopup.toggle();
     }
 
-    disposeNativeView(): void {
-        (<any>this.nativeView).owner = null;
+    public disposeNativeView(): void {
+        ( this.nativeView as any).owner = null;
 
         super.disposeNativeView();
     }
@@ -49,10 +46,10 @@ export class EmojiPicker extends EmojiPickerBase {
 @CSSType("EmojiLabel")
 export class EmojiLabel extends EmojiLabelBase implements EmojiLabelDefinition {
     // @ts-ignore
-    nativeViewProtected: com.vanniktech.emoji.EmojiTextView;
+    public nativeViewProtected: com.vanniktech.emoji.EmojiTextView;
     // @ts-ignore
-    nativeTextViewProtected: com.vanniktech.emoji.EmojiTextView;
-    EmojiLabelView: typeof com.vanniktech.emoji.EmojiTextView;
+    public nativeTextViewProtected: com.vanniktech.emoji.EmojiTextView;
+    public EmojiLabelView: typeof com.vanniktech.emoji.EmojiTextView;
 
     get textWrap(): boolean {
         return this.style.whiteSpace === "normal";
@@ -65,11 +62,11 @@ export class EmojiLabel extends EmojiLabelBase implements EmojiLabelDefinition {
         this.style.whiteSpace = value ? "normal" : "nowrap";
     }
 
-    [textProperty.setNative](value: string) {
+    public [textProperty.setNative](value: string) {
         this.nativeView.setText(value);
     }
 
-    public createNativeView(): Object {
+    public createNativeView(): object {
         if (!this.EmojiLabelView) {
             com.vanniktech.emoji.EmojiManager.install(new com.vanniktech.emoji.ios.IosEmojiProvider());
             this.EmojiLabelView = new com.vanniktech.emoji.EmojiTextView(this._context);
@@ -77,20 +74,20 @@ export class EmojiLabel extends EmojiLabelBase implements EmojiLabelDefinition {
         return this.EmojiLabelView;
     }
 
-    initNativeView(): void {
-        (<any>this.nativeView).owner = this;
+    public initNativeView(): void {
+        ( this.nativeView as any).owner = this;
         super.initNativeView();
         const textView = this.nativeTextViewProtected;
         textView.setSingleLine(true);
         textView.setEllipsize(android.text.TextUtils.TruncateAt.END);
     }
 
-    disposeNativeView(): void {
-        (<any>this.nativeView).owner = null;
+    public disposeNativeView(): void {
+        ( this.nativeView as any).owner = null;
         super.disposeNativeView();
     }
 
-    [whiteSpaceProperty.setNative](value: WhiteSpace) {
+    public [whiteSpaceProperty.setNative](value: WhiteSpace) {
         // Label initial value is no-wrap. set in initNativeView
         const newValue = value === "initial" ? "nowrap" : value;
         super[whiteSpaceProperty.setNative](newValue);

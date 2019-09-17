@@ -6,17 +6,17 @@ import { AppComponent } from "./app.component";
 
 @NgModule({
     bootstrap: [
-        AppComponent
+        AppComponent,
+    ],
+    declarations: [
+        AppComponent,
     ],
     imports: [
         NativeScriptModule,
-        AppRoutingModule
-    ],
-    declarations: [
-        AppComponent
+        AppRoutingModule,
     ],
     schemas: [
-        NO_ERRORS_SCHEMA
-    ]
+        NO_ERRORS_SCHEMA,
+    ],
 })
 export class AppModule { }

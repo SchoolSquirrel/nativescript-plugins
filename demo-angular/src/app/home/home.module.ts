@@ -5,15 +5,15 @@ import { HomeRoutingModule } from "./home-routing.module";
 import { HomeComponent } from "./home.component";
 
 @NgModule({
+    declarations: [
+        HomeComponent,
+    ],
     imports: [
         NativeScriptCommonModule,
-        HomeRoutingModule
-    ],
-    declarations: [
-        HomeComponent
+        HomeRoutingModule,
     ],
     schemas: [
-        NO_ERRORS_SCHEMA
-    ]
+        NO_ERRORS_SCHEMA,
+    ],
 })
 export class HomeModule { }
