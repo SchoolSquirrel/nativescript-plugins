@@ -38,7 +38,7 @@ matrix:
       node_js: "10"
       jdk: oraclejdk8
       script: 
-        - - pod repo update && cd src && npm i && npm run tsc && cd ../demo && tns build ios
+        - pod repo update && cd src && npm i && npm run tsc && cd ../demo && tns build ios
     - os: linux
       language: android
       dist: precise
