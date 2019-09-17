@@ -7,6 +7,13 @@ export class HomeViewModel extends Observable {
         const page = frame.topmost().currentPage;
         page.getViewById("myEmojiPicker").togglePopup();
     }
+
+    onCopyBtnTap(args): void {
+        alert("Copied");
+        return;
+        const page = frame.topmost().currentPage;
+        page.getViewById("myEmojiPicker").togglePopup();
+    }
     constructor() {
         super();
     }

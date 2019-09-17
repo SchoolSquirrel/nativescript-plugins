@@ -1,7 +1,5 @@
-import { Common, CommonLabel } from './emoji-picker.common';
-export declare class EmojiPicker extends Common {
-  togglePopup(): void;
+import { EmojiPickerBase, EmojiLabelBase } from './emoji-picker.common';
+export declare class EmojiPicker extends EmojiPickerBase {
 }
-export declare class EmojiLabel extends Common {
-  doSth(): void;
+export declare class EmojiLabel extends EmojiLabelBase {
 }

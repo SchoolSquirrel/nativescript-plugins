@@ -8,10 +8,10 @@
         <Label class="action-bar-title" text="Nativescript-Emoji-Picker"></Label>
     </ActionBar>
 
-    <GridLayout rows="auto, auto, auto, *">
+    <GridLayout rows="auto, auto, auto, auto, *">
         <ns:EmojiPicker row="0" id="myEmojiPicker"></ns:EmojiPicker>
         <Button row="1" text="Toggle Popup" tap="{{ onButtonTap }}" class="btn btn-primary btn-active" />
         <ns:EmojiLabel row="2" text="TestText"></ns:EmojiLabel>
-        <Button row="1" text="Toggle Popup" tap="{{ onCopyBtnTap }}" class="btn btn-primary btn-active" />
+        <Button row="3" text="Copy text to label" tap="{{ onCopyBtnTap }}" class="btn btn-primary btn-active" />
     </GridLayout>
 </Page>
