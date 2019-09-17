@@ -1,18 +1,24 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild } from "@angular/core";
+import { EmojiPicker, EmojiLabel } from "nativescript-emoji-picker";
 
 @Component({
     moduleId: module.id,
     selector: "Home",
+    styleUrls: ["./home.component.css"],
     templateUrl: "./home.component.html",
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
+    @ViewChild("myEmojiPicker", { static: false }) public myEmojiPicker: EmojiPicker;
+    @ViewChild("myEmojiLabel", { static: true }) public myEmojiLabel: EmojiLabel;
 
-    constructor() {
-        // Use the component constructor to inject providers.
+
+    public onButtonTap(): void {
+        this.myEmojiPicker.nativeElement.togglePopup();
     }
 
-    public ngOnInit() {
-        //
+    public onCopyBtnTap(): void {
+        console.log("pressed!");
+        this.myEmojiLabel.nativeElement.text = this.myEmojiPicker.nativeElement.text;
     }
 
 }

@@ -22,7 +22,6 @@ export class EmojiPicker extends EmojiPickerBase implements EmojiPickerDefinitio
         editText.setMaxLines(1);
         editText.setHorizontallyScrolling(true);
     }
-
     public [keyboardTypeProperty.setNative]() {
         this.setSecureAndKeyboardType();
     }
