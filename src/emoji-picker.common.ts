@@ -8,12 +8,18 @@ export const textProperty = new Property<EmojiLabelBase, string>({ name: "text",
 
 export abstract class EmojiPickerBase extends EditableTextBase implements EmojiPickerDefinition {
     public static returnPressEvent = "returnPress";
+    public togglePopup;
     public android: any;
+    public emojiPopup;
+    public setSecureAndKeyboardType() { /**/ }
+    public _onReturnPress() { /**/ }
+    public _configureEditText() { /**/ }
 }
 
 export abstract class EmojiLabelBase extends TextBase implements EmojiLabelDefinition {
     public text: string;
     public textWrap: boolean;
+    public EmojiLabelView;
 }
 
 export let com: any;
