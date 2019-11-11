@@ -20,19 +20,19 @@
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
-    "nativescript-angular": "~8.2.0",
+    "nativescript-angular": "~8.20.1",
     "nativescript-emoji-picker": "file:../src",
-    "nativescript-theme-core": "~1.0.6",
+    "nativescript-theme-core": "~2.0.24",
     "reflect-metadata": "~0.1.12",
     "rxjs": "^6.4.0",
-    "tns-core-modules": "~6.0.0",
-    "zone.js": "~0.9.1"
+    "tns-core-modules": "~6.2.0",
+    "zone.js": "~0.10.2"
   },
   "devDependencies": {
     "@angular/compiler-cli": "~8.2.0",
-    "@ngtools/webpack": "~8.2.0",
-    "nativescript-dev-webpack": "~1.1.0",
-    "typescript": "~3.5.3"
+    "@ngtools/webpack": "~8.3.18",
+    "nativescript-dev-webpack": "~1.3.0",
+    "typescript": "~3.7.2"
   },
   "gitHead": "42f2a6a9c94eaf9c68d2a41e0daaa1a2544bc28f",
   "readme": "NativeScript Application"
