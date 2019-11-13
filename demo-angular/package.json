@@ -20,7 +20,7 @@
     "@angular/platform-browser": "~8.2.0",
     "@angular/platform-browser-dynamic": "~8.2.0",
     "@angular/router": "~8.2.0",
-    "nativescript-angular": "~8.20.1",
+    "nativescript-angular": "~8.20.2",
     "nativescript-emoji-picker": "file:../src",
     "nativescript-theme-core": "~2.0.24",
     "reflect-metadata": "~0.1.12",
