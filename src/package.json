@@ -45,7 +45,7 @@
     "license": "MIT",
     "homepage": "https://github.com/hrueger/nativescript-emoji-picker",
     "devDependencies": {
-        "tns-core-modules": "^6.0.0",
+        "tns-core-modules": "^6.3.1",
         "tns-platform-declarations": "^6.0.0",
         "typescript": "~3.7.2",
         "prompt": "^1.0.0",
