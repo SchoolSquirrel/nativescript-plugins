@@ -3,7 +3,7 @@ import { EmojiLabel as EmojiLabelDefinition } from ".";
 import { EmojiPicker as EmojiPickerDefinition } from ".";
 import { EmojiLabelBase, EmojiPickerBase, textProperty } from "./emoji-picker.common";
 export * from "tns-core-modules/ui/text-base";
-export * from "tns-core-modules/ui/text-field/text-field-common";
+export * from "tns-core-modules/ui/text-field/text-field";
 
 declare const com: any;
 

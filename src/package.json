@@ -1,6 +1,6 @@
 {
     "name": "nativescript-emoji-picker",
-    "version": "0.2.3",
+    "version": "0.2.4",
     "description": "The first and only emoji picker for NativeScript!",
     "main": "emoji-picker",
     "typings": "index.d.ts",
