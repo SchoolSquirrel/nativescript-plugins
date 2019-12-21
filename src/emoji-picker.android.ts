@@ -4,7 +4,6 @@ import { EmojiPicker as EmojiPickerDefinition } from ".";
 import { EmojiLabelBase, EmojiPickerBase, textProperty } from "./emoji-picker.common";
 export * from "tns-core-modules/ui/text-base";
 export * from "tns-core-modules/ui/text-field/text-field-common";
-import { keyboardTypeProperty } from "tns-core-modules/ui/text-field/text-field-common";
 
 declare const com: any;
 
@@ -21,9 +20,6 @@ export class EmojiPicker extends EmojiPickerBase implements EmojiPickerDefinitio
         editText.setLines(1);
         editText.setMaxLines(1);
         editText.setHorizontallyScrolling(true);
-    }
-    public [keyboardTypeProperty.setNative]() {
-        this.setSecureAndKeyboardType();
     }
 
     public setSecureAndKeyboardType(): void {
