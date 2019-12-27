@@ -3,6 +3,6 @@
     "main": "index.js",
     "devDependencies": {
         "nativescript-angular": "8.20.3",
-        "@angular/core": "8.2.13"
+        "@angular/core": "8.2.14"
     }
 }
