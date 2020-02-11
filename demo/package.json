@@ -14,7 +14,7 @@
   "dependencies": {
     "nativescript-emoji-picker": "file:../src",
     "nativescript-theme-core": "~2.0.24",
-    "tns-core-modules": "~6.3.1"
+    "tns-core-modules": "~6.4.0"
   },
   "devDependencies": {
     "nativescript-dev-webpack": "~1.4.0",
