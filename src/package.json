@@ -52,7 +52,7 @@
         "rimraf": "^3.0.0",
         "tslint": "^5.12.1",
         "semver": "^7.0.0",
-        "nativescript-angular": "8.20.4",
+        "nativescript-angular": "8.21.0",
         "@angular/core": "8.2.14"
     },
     "dependencies": {}
