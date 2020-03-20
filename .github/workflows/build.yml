@@ -1,0 +1,32 @@
+name: Build
+
+on: [push]
+
+jobs:
+  build_android:
+    name: Android on Windows
+    runs-on: [windows-latest]
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+    - uses: kineticengines/setup-android-actions@v0.1
+    - name: Install Nativescript CLI
+      run: npm i -g nativescript
+    - name: Install dependencies in /src
+      working-directory: src
+      run: npm i
+      - name: Install dependencies in /demo
+      working-directory: demo
+      run: npm i
+      - name: Install dependencies in /demo-angular
+      working-directory: demo-angular
+      run: npm i
+    - name: Build Demo Android
+      working-directory: src
+      run: npm run build.demo.android
+    - name: Build Angular Demo Android
+      working-directory: src
+      run: npm run build.demo-angular.android

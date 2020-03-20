@@ -15,19 +15,21 @@
         "url": "https://github.com/hrueger/nativescript-emoji-picker.git"
     },
     "scripts": {
-        "tsc": "npm i && tsc",
         "build": "npm run tsc && npm run build.native",
+        "build.demo-angular.android": "npm run tsc && cd ../demo-angular && tns build android",
+        "build.demo.android": "npm run tsc && cd ../demo && tns build android",
         "build.native": "node scripts/build-native.js",
-        "prepack": "npm run build.native",
-        "demo.ios": "npm run tsc && cd ../demo && tns run ios --emulator",
+        "clean": "npm run demo.reset && npm run demo-angular.reset && npx rimraf -- node_modules package-lock.json && npm i",
+        "demo-angular.android": "npm run tsc && cd ../demo-angular && tns run android",
+        "demo-angular.ios": "npm run tsc && cd ../demo-angular && tns run ios --emulator",
+        "demo-angular.reset": "cd ../demo-angular && npx rimraf -- hooks node_modules platforms package-lock.json",
         "demo.android": "npm run tsc && cd ../demo && tns run android",
         "demo.android.clean": "npm run tsc && cd ../demo && tns run android --clean",
+        "demo.ios": "npm run tsc && cd ../demo && tns run ios --emulator",
         "demo.reset": "cd ../demo && npx rimraf -- hooks node_modules platforms package-lock.json",
-        "demo-angular.ios": "npm run tsc && cd ../demo-angular && tns run ios --emulator",
-        "demo-angular.android": "npm run tsc && cd ../demo-angular && tns run android",
-        "demo-angular.reset": "cd ../demo-angular && npx rimraf -- hooks node_modules platforms package-lock.json",
         "plugin.prepare": "npm run build && cd ../demo && tns plugin remove nativescript-emoji-picker && tns plugin add ../src && cd ../demo-angular && tns plugin remove nativescript-emoji-picker && tns plugin add ../src",
-        "clean": "npm run demo.reset && npm run demo-angular.reset && npx rimraf -- node_modules package-lock.json && npm i"
+        "prepack": "npm run build.native",
+        "tsc": "npm i && tsc"
     },
     "keywords": [
         "NativeScript",
