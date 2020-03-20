@@ -18,10 +18,10 @@ jobs:
     - name: Install dependencies in /src
       working-directory: src
       run: npm i
-      - name: Install dependencies in /demo
+    - name: Install dependencies in /demo
       working-directory: demo
       run: npm i
-      - name: Install dependencies in /demo-angular
+    - name: Install dependencies in /demo-angular
       working-directory: demo-angular
       run: npm i
     - name: Build Demo Android
