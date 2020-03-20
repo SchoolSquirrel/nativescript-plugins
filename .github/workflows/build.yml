@@ -12,9 +12,12 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: 12
-    - uses: kineticengines/setup-android-actions@v0.1
+    - name: Add Android to path
+      run: setx path "%path%;c:\Program Files (x86)\Android\android-sdk\build-tools\29.0.3"
     - name: Install Nativescript CLI
       run: npm i -g nativescript
+    - name: Run tns doctor for debug
+      run: tns doctor
     - name: Install dependencies in /src
       working-directory: src
       run: npm i
