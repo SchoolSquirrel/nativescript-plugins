@@ -32,7 +32,7 @@
     "@angular/compiler-cli": "~8.2.0",
     "@ngtools/webpack": "~9.0.0",
     "nativescript-dev-webpack": "~1.5.0",
-    "typescript": "~3.7.2"
+    "typescript": "~3.8.2"
   },
   "gitHead": "42f2a6a9c94eaf9c68d2a41e0daaa1a2544bc28f",
   "readme": "NativeScript Application"
