@@ -18,6 +18,8 @@
         "build": "npm run tsc && npm run build.native",
         "build.demo-angular.android": "npm run tsc && cd ../demo-angular && tns build android",
         "build.demo.android": "npm run tsc && cd ../demo && tns build android",
+        "build.demo-angular.iOS": "npm run tsc && cd ../demo-angular && tns build iOS",
+        "build.demo.iOS": "npm run tsc && cd ../demo && tns build iOS",
         "build.native": "node scripts/build-native.js",
         "clean": "npm run demo.reset && npm run demo-angular.reset && npx rimraf -- node_modules package-lock.json && npm i",
         "demo-angular.android": "npm run tsc && cd ../demo-angular && tns run android",
