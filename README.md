@@ -1,6 +1,6 @@
 # nativescript-emoji-picker😃
 
-[![Build](https://github.com/hrueger/nativescript-emoji-picker/workflows/Build/badge.svg)](https://github.com/hrueger/nativescript-emoji-picker/actions) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/hrueger/nativescript-emoji-picker/blob/master/LICENSE) [![Maintenance](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/hrueger/nativescript-emoji-picker/graphs/commit-activity) [![Greenkeeper badge](https://badges.greenkeeper.io/hrueger/nativescript-emoji-picker.svg)](https://greenkeeper.io/)
+[![Build](https://github.com/hrueger/nativescript-emoji-picker/workflows/Build/badge.svg)](https://github.com/hrueger/nativescript-emoji-picker/actions) [![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/hrueger/nativescript-emoji-picker/blob/master/LICENSE) [![Maintenance](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/hrueger/nativescript-emoji-picker/graphs/commit-activity)
 
 There are many emoji pickers for angular and the web, but no one for NativeScript?! Let's change this!
 
