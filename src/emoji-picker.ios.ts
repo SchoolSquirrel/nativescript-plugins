@@ -1,9 +1,9 @@
-import { CSSType } from "tns-core-modules/ui/text-base";
+import { CSSType } from "@nativescript/core/ui/text-base";
 import { EmojiLabel as EmojiLabelDefinition } from ".";
 import { EmojiPicker as EmojiPickerDefinition } from ".";
 import { EmojiLabelBase, EmojiPickerBase } from "./emoji-picker.common";
-export * from "tns-core-modules/ui/text-base";
-export * from "tns-core-modules/ui/text-field/text-field";
+export * from "@nativescript/core/ui/text-base";
+export * from "@nativescript/core/ui/text-field/text-field";
 
 @CSSType("EmojiPicker")
 export class EmojiPicker extends EmojiPickerBase implements EmojiPickerDefinition {

@@ -38,7 +38,7 @@ Use the plugin:
 ```
 On the JS / TS Side you can toggle the keyboard or the popup window of the edit text field like this:
 ```typescript
-const page = frame.topmost().currentPage;
+const page = frame.Frame.topmost().currentPage;
 page.getViewById("myEmojiPicker").togglePopup();
 ```
 

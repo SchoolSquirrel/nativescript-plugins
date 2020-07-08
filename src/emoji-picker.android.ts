@@ -1,18 +1,19 @@
-import { booleanConverter, CSSType, TextBase, WhiteSpace, whiteSpaceProperty } from "tns-core-modules/ui/text-base";
+import { booleanConverter, CSSType, TextBase, WhiteSpace, whiteSpaceProperty } from "@nativescript/core/ui/text-base";
 import { EmojiLabel as EmojiLabelDefinition } from ".";
 import { EmojiPicker as EmojiPickerDefinition } from ".";
 import { EmojiLabelBase, EmojiPickerBase, textProperty } from "./emoji-picker.common";
-export * from "tns-core-modules/ui/text-base";
-export * from "tns-core-modules/ui/text-field/text-field";
+export * from "@nativescript/core/ui/text-base";
+export * from "@nativescript/core/ui/text-field/text-field";
 
 declare const com: any;
+declare const android: any;
 
 @CSSType("EmojiPicker")
 export class EmojiPicker extends EmojiPickerBase implements EmojiPickerDefinition {
     public nativeView: any;
     public emojiPopup: any;
 
-    public _configureEditText(editText: android.widget.EditText) {
+    public _configureEditText(editText: typeof android.widget.EditText) {
         editText.setInputType(android.text.InputType.TYPE_CLASS_TEXT |
             android.text.InputType.TYPE_TEXT_VARIATION_NORMAL |
             android.text.InputType.TYPE_TEXT_FLAG_CAP_SENTENCES |
@@ -130,9 +131,9 @@ export class EmojiPicker extends EmojiPickerBase implements EmojiPickerDefinitio
 @CSSType("EmojiLabel")
 export class EmojiLabel extends EmojiLabelBase implements EmojiLabelDefinition {
     // @ts-ignore
-    public nativeViewProtected: com.vanniktech.emoji.EmojiTextView;
+    public nativeViewProtected: typeof com.vanniktech.emoji.EmojiTextView;
     // @ts-ignore
-    public nativeTextViewProtected: com.vanniktech.emoji.EmojiTextView;
+    public nativeTextViewProtected: typeof com.vanniktech.emoji.EmojiTextView;
     public EmojiLabelView: typeof com.vanniktech.emoji.EmojiTextView;
 
     get textWrap(): boolean {

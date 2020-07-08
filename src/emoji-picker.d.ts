@@ -1,6 +1,6 @@
-import { View } from "tns-core-modules/ui/core/view";
-import { TextBase } from "tns-core-modules/ui/text-base/text-base";
-import { EditableTextBase, Property } from "tns-core-modules/ui/editable-text-base";
+import { View } from "@nativescript/core/ui/core/view";
+import { TextBase } from "@nativescript/core/ui/text-base/text-base";
+import { EditableTextBase, Property } from "@nativescript/core/ui/editable-text-base";
 
 export class EmojiPicker extends EditableTextBase {
     android: any;

@@ -3,5 +3,8 @@
   "android": {
     "v8Flags": "--expose_gc",
     "markingMode": "none"
+  },
+  "devDependencies": {
+    "tslib": "^2.0.0"
   }
 }

@@ -1,7 +1,9 @@
-import { Property, View} from "tns-core-modules/ui/core/view";
-import { EditableTextBase } from "tns-core-modules/ui/editable-text-base/editable-text-base";
-import { TextBase } from "tns-core-modules/ui/text-base/text-base";
+import { Property, View} from "@nativescript/core/ui/core/view";
+import { EditableTextBase } from "@nativescript/core/ui/editable-text-base/editable-text-base";
+import { TextBase } from "@nativescript/core/ui/text-base/text-base";
 import { EmojiLabel as EmojiLabelDefinition, EmojiPicker as EmojiPickerDefinition } from "./emoji-picker";
+
+declare const android: any;
 
 export const textProperty = new Property<EmojiLabelBase, string>({ name: "text", defaultValue: ""});
 
@@ -13,7 +15,7 @@ export abstract class EmojiPickerBase extends EditableTextBase implements EmojiP
     public setSecureAndKeyboardType(): void {  }
     public togglePopup(): void {  }
     public _onReturnPress(): void { }
-    public _configureEditText(editText: android.widget.EditText): void {  }
+    public _configureEditText(editText: typeof android.widget.EditText): void {  }
 }
 
 export abstract class EmojiLabelBase extends TextBase implements EmojiLabelDefinition {

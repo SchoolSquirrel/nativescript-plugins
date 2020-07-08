@@ -1,5 +1,4 @@
-import { EventData } from "tns-core-modules/data/observable";
-import { NavigatedData, Page } from "tns-core-modules/ui/page";
+import { EventData, NavigatedData, Page } from "@nativescript/core";
 import { HomeViewModel } from "./home-view-model";
 
 export function pageLoaded(args: EventData) {
