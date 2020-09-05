@@ -1,9 +1,8 @@
-import { booleanConverter, CSSType, TextBase, WhiteSpace, whiteSpaceProperty } from "@nativescript/core/ui/text-base";
+import { TextBase, CSSType, booleanConverter } from "@nativescript/core";
 import { EmojiLabel as EmojiLabelDefinition } from ".";
 import { EmojiPicker as EmojiPickerDefinition } from ".";
 import { EmojiLabelBase, EmojiPickerBase, textProperty } from "./emoji-picker.common";
-export * from "@nativescript/core/ui/text-base";
-export * from "@nativescript/core/ui/text-field/text-field";
+import { WhiteSpace, whiteSpaceProperty } from '@nativescript/core/ui/text-base';
 
 declare const com: any;
 declare const android: any;

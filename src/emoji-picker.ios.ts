@@ -1,9 +1,7 @@
-import { CSSType } from "@nativescript/core/ui/text-base";
+import { CSSType } from "@nativescript/core";
 import { EmojiLabel as EmojiLabelDefinition } from ".";
 import { EmojiPicker as EmojiPickerDefinition } from ".";
 import { EmojiLabelBase, EmojiPickerBase } from "./emoji-picker.common";
-export * from "@nativescript/core/ui/text-base";
-export * from "@nativescript/core/ui/text-field/text-field";
 
 @CSSType("EmojiPicker")
 export class EmojiPicker extends EmojiPickerBase implements EmojiPickerDefinition {

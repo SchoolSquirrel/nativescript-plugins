@@ -1,6 +1,4 @@
-import { Property, View} from "@nativescript/core/ui/core/view";
-import { EditableTextBase } from "@nativescript/core/ui/editable-text-base/editable-text-base";
-import { TextBase } from "@nativescript/core/ui/text-base/text-base";
+import { EditableTextBase, TextBase, Property } from "@nativescript/core";
 import { EmojiLabel as EmojiLabelDefinition, EmojiPicker as EmojiPickerDefinition } from "./emoji-picker";
 
 declare const android: any;
