@@ -12,7 +12,7 @@ There are many emoji pickers for angular and the web, but no one for NativeScrip
 As this plugin is currently in developement screenshots will be added later this year.
 
 ## Limitation
-The emoji picker currently only supports Android. An IOS version is in development. 
+The emoji picker currently only supports Android.
 
 ## Installation
 
