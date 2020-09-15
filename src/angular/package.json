@@ -1,8 +1,0 @@
-{
-    "name": "nativescript-emoji-picker",
-    "main": "index.js",
-    "devDependencies": {
-        "@nativescript/angular": "9.0.0",
-        "@angular/core": "10.0.2"
-    }
-}
