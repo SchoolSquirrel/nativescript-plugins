@@ -63,6 +63,13 @@ module.exports = {
 		// packages
 		// build output is always in dist/packages
 		'@schoolsquirrel': {
+			// @schoolsquirrel/emoji-picker
+			'emoji-picker': {
+				build: {
+					script: 'nx run emoji-picker:build.all',
+					description: '@schoolsquirrel/emoji-picker: Build',
+				},
+			},
 			'build-all': {
 				script: 'nx run all:build',
 				description: 'Build all packages',
@@ -73,10 +80,14 @@ module.exports = {
 			description: '_____________  Focus (VS Code supported)  _____________',
 		},
 		focus: {
+			'emoji-picker': {
+				script: 'nx run emoji-picker:focus',
+				description: 'Focus on @schoolsquirrel/emoji-picker',
+			},
 			reset: {
 				script: 'nx run all:focus',
 				description: 'Reset Focus',
-			}
+			},
 		},
 		'.....................': {
 			script: `npx cowsay "That's all for now folks ~"`,

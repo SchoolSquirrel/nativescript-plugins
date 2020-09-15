@@ -22,6 +22,9 @@
 		},
 		"all": {
 			"tags": []
+		},
+		"emoji-picker": {
+			"tags": []
 		}
 	},
 	"workspaceLayout": {

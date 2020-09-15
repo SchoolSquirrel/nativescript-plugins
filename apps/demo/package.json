@@ -5,7 +5,8 @@
 	"repository": "<fill-your-repository-here>",
 	"dependencies": {
 		"nativescript-theme-core": "file:../../node_modules/nativescript-theme-core",
-		"@nativescript/core": "file:../../node_modules/@nativescript/core"
+		"@nativescript/core": "file:../../node_modules/@nativescript/core",
+		"@schoolsquirrel/emoji-picker": "file:../../packages/emoji-picker"
 	},
 	"devDependencies": {
 		"@nativescript/android": "~7.0.0",
