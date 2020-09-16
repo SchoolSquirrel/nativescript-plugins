@@ -1,0 +1,9 @@
+android {
+	
+}
+
+dependencies {
+    implementation 'com.vanniktech:emoji-ios:0.7.0'
+    implementation 'com.vanniktech:emoji-twitter:0.7.0'
+    implementation 'com.vanniktech:emoji-google:0.7.0'
+}
