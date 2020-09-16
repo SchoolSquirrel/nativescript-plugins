@@ -5,10 +5,12 @@
     </Page.actionBar>
     <StackLayout class="p-20">
         <ScrollView class="h-full">
-          <StackLayout>
-            <Button text="Test emoji-picker" tap="{{ testIt }}" class="btn btn-primary"/>
-
-          </StackLayout>
+          <GridLayout rows="auto, auto, auto, auto, *">
+            <ns:EmojiPicker row="0" id="myEmojiPicker"></ns:EmojiPicker>
+            <Button row="1" text="Toggle Popup" tap="{{ onButtonTap }}" class="btn btn-primary btn-active" />
+            <ns:EmojiLabel id="myEmojiLabel" row="2" text="TestText"></ns:EmojiLabel>
+            <Button row="3" text="Copy text to label" tap="{{ onCopyBtnTap }}" class="btn btn-primary btn-active" />
+        </GridLayout>
         </ScrollView>
     </StackLayout>
 </Page>
