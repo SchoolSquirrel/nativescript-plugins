@@ -1,8 +1,11 @@
 <ActionBar title="emoji-picker" class="action-bar"> </ActionBar>
 <StackLayout class="p-20">
-	<ScrollView class="h-full">
-		<StackLayout>
-			<Button text="Test emoji-picker" (tap)="demoShared.testIt()" class="btn btn-primary"></Button>
-		</StackLayout>
-	</ScrollView>
+    <ScrollView class="h-full">
+        <GridLayout rows="auto, auto, auto, auto, *">
+            <EmojiPicker row="0" #myEmojiPicker></EmojiPicker>
+            <Button row="1" text="Toggle Popup" (tap)="onButtonTap()" class="btn btn-primary btn-active"></Button>
+            <EmojiLabel #myEmojiLabel row="2" text="Have fun with the nativescript-emoji-picker😃"></EmojiLabel>
+            <Button row="3" text="Copy text to label" (tap)="onCopyBtnTap()" class="btn btn-primary btn-active"></Button>
+        </GridLayout>
+    </ScrollView>
 </StackLayout>

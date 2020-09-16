@@ -1,17 +1,21 @@
-import { Component, NgZone } from '@angular/core';
-import { DemoSharedEmojiPicker } from '@demo/shared';
-import {} from '@schoolsquirrel/emoji-picker';
+import { Component, NgZone, ViewChild } from '@angular/core';
+import { EmojiLabel, EmojiPicker } from '@schoolsquirrel/emoji-picker';
 
 @Component({
 	selector: 'demo-emoji-picker',
 	templateUrl: 'emoji-picker.component.html',
 })
 export class EmojiPickerComponent {
-	demoShared: DemoSharedEmojiPicker;
+	@ViewChild("myEmojiPicker", { static: false }) public myEmojiPicker: EmojiPicker;
+    @ViewChild("myEmojiLabel", { static: true }) public myEmojiLabel: EmojiLabel;
 
-	constructor(private _ngZone: NgZone) {}
 
-	ngOnInit() {
-		this.demoShared = new DemoSharedEmojiPicker();
-	}
+    public onButtonTap(): void {
+        this.myEmojiPicker.nativeElement.togglePopup();
+    }
+
+    public onCopyBtnTap(): void {
+        console.log("pressed!");
+        this.myEmojiLabel.nativeElement.text = this.myEmojiPicker.nativeElement.text;
+    }
 }
