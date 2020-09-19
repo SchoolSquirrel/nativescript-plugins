@@ -25,6 +25,9 @@
 		},
 		"emoji-picker": {
 			"tags": []
+		},
+		"squirrel-chat-ui": {
+			"tags": []
 		}
 	},
 	"workspaceLayout": {

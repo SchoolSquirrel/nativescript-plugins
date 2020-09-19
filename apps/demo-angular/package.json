@@ -15,7 +15,8 @@
 		"reflect-metadata": "file:../../node_modules/reflect-metadata",
 		"rxjs": "file:../../node_modules/rxjs",
 		"zone.js": "file:../../node_modules/zone.js",
-		"@schoolsquirrel/emoji-picker": "file:../../dist/packages/emoji-picker"
+		"@schoolsquirrel/emoji-picker": "file:../../dist/packages/emoji-picker",
+		"@schoolsquirrel/squirrel-chat-ui": "file:../../dist/packages/squirrel-chat-ui"
 	},
 	"devDependencies": {
 		"@angular/compiler-cli": "file:../../node_modules/@angular/compiler-cli",

@@ -6,6 +6,7 @@
     <ScrollView class="h-full">
       <StackLayout>
         <Button text="emoji-picker" tap="{{ viewDemo }}" class="btn btn-primary view-demo"/>
+<Button text="squirrel-chat-ui" tap="{{ viewDemo }}" class="btn btn-primary view-demo"/>
       </StackLayout>
     </ScrollView>
   </StackLayout>

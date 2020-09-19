@@ -8,11 +8,14 @@ import { Router } from '@angular/router';
 export class HomeComponent {
 	constructor(private router: Router) {}
 	demos = [
-	{
-		name: 'emoji-picker'
-	}
+		{
+			name: 'emoji-picker',
+		},
+		{
+			name: 'nativescript-squirrel-chat-ui',
+		},
+		{
+			name: 'squirrel-chat-ui',
+		},
 	];
-	n(i) {
-		this.router.navigate(["/" + this.demos[i.index].name]);
-	}
 }

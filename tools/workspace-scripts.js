@@ -70,6 +70,13 @@ module.exports = {
 					description: '@schoolsquirrel/emoji-picker: Build',
 				},
 			},
+			// @schoolsquirrel/squirrel-chat-ui
+			'squirrel-chat-ui': {
+				build: {
+					script: 'nx run squirrel-chat-ui:build.all',
+					description: '@schoolsquirrel/squirrel-chat-ui: Build',
+				},
+			},
 			'build-all': {
 				script: 'nx run all:build',
 				description: 'Build all packages',
@@ -83,6 +90,10 @@ module.exports = {
 			'emoji-picker': {
 				script: 'nx run emoji-picker:focus',
 				description: 'Focus on @schoolsquirrel/emoji-picker',
+			},
+			'squirrel-chat-ui': {
+				script: 'nx run squirrel-chat-ui:focus',
+				description: 'Focus on @schoolsquirrel/squirrel-chat-ui',
 			},
 			reset: {
 				script: 'nx run all:focus',
