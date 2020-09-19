@@ -1,0 +1,70 @@
+<GridLayout rows="auto, *, auto" class="conversation-container">
+    <RadListView row="1" [items]="_messages">
+        <ng-template tkListItemTemplate let-item="item">
+            <FlexboxLayout class="messages">
+                <StackLayout [shadow]="2" cornerRadius="20" class="message-bubble" [class.continuation]="isContinuing(item)" [class.fromMe]="item.fromMe">
+                    <FlexboxLayout class="message-bubble-content">
+                        <GridLayout rows="auto, auto">
+                            <Label class="sendername" row="0" [visibility]="!isContinuing(item) && !item.fromMe ? 'visible' : 'hidden'" [text]="item.sender.name"></Label>
+                            <EmojiLabel class="message-text" row="1" [text]="item.text" textWrap="true"></EmojiLabel>
+                        </GridLayout>
+
+                        <FlexboxLayout class="meta">
+                            <Label [text]="item.date" class="time"></Label>
+                            <Label [text]="getStatusIcon(item)" class="check fas"></Label>
+                        </FlexboxLayout>
+                    </FlexboxLayout>
+                </StackLayout>
+            </FlexboxLayout>
+        </ng-template>
+    </RadListView>
+    <GridLayout columns="*, auto" row="2" class="p-3">
+        <GridLayout col="0" columns="auto, *, auto" class="px-2 input-container">
+            <Button col="0" text="laugh" class="fas btn-icon btn-invisible btn-round m-0 p-0" (tap)="toggleEmojiPicker()"></Button>
+            <EmojiPicker (textChange)="onTextChange($event)" #messageInput col="1" class="m-x-5 m-y-0 message-input" hint="Type a message..."></EmojiPicker>
+            <Button col="2" text="paperclip" class="fas btn-invisible btn-round btn-icon m-0 p-0"></Button>
+        </GridLayout>
+        <Button col="1" [text]="canSendMesage ? 'paper-plane' : 'microphone'" (tap)="sendMessage()" class="fas btn-round btn-icon btn-send m-0 p-0"></Button>
+    </GridLayout>
+</GridLayout>
+
+<!-- 
+<GridLayout rows="auto, auto, auto" columns="auto, auto" class="message" [class.fromMe]="item.fromMe">
+                    <Label class="" row="0" col="0" [text]="item.sender.name"></Label>
+                    <Label class="" row="0" col="1" text="reactions"></Label>
+                    <Label class="content" row="1" col="0" textWrap="true" colspan="2" [text]="item.text"></Label>
+                    <Label class="" row="2" col="0" text="timestamp"></Label>
+                    <Label class="fas" row="2" col="1" text="clock"></Label>
+                </GridLayout>
+
+
+-->
+<!--
+    <GridLayout rows="auto, auto, auto" columns="auto" class="message" [class.fromMe]="item.fromMe">
+                    <Label class="" row="0" [text]="item.sender.name"></Label>
+                    <Label class="" row="0" text="reactions"></Label>
+                    <Label class="" row="1" textWrap="true" colspan="2" [text]="item.text"></Label>
+                    <Label row="2">
+                        <FormattedString>
+                            <Span text="timestamp"></Span>
+                            <Span text="clock" class="fas"></Span>
+                        </FormattedString>
+                    </Label>
+                </GridLayout>
+-->
+
+<!--
+    <GridLayout class="message-container" [columns]="item.fromMe ? '100, *, auto' : 'auto, *, 100'">
+                <GridLayout rows="auto, auto, auto" columns="auto" [col]="item.fromMe ? 2 : 0" class="message" [class.fromMe]="item.fromMe">
+                    <Label class="" row="0" [text]="item.sender.name"></Label>
+                    <Label class="" row="0" text="reactions"></Label>
+                    <Label class="" row="1" textWrap="true" colspan="2" [text]="item.text"></Label>
+                    <Label row="2">
+                        <FormattedString>
+                            <Span text="timestamp"></Span>
+                            <Span text="clock" class="fas"></Span>
+                        </FormattedString>
+                    </Label>
+                </GridLayout>
+            </GridLayout>
+-->

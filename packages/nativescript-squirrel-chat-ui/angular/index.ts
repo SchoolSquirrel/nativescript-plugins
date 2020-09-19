@@ -1,9 +1,14 @@
-import { NgModule } from '@angular/core';
-import { registerElement } from '@nativescript/angular';
-import { SquirrelChatUi } from '@schoolsquirrel/nativescript-squirrel-chat-ui';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { NativescriptSquirrelChatUiComponent } from './nativescript-squirrel-chat-ui.component';
 
-@NgModule()
+@NgModule({
+    declarations: [
+        NativescriptSquirrelChatUiComponent,
+    ],
+    imports: [],
+    schemas: [
+        NO_ERRORS_SCHEMA,
+        CUSTOM_ELEMENTS_SCHEMA,
+    ],
+})
 export class SquirrelChatUiModule {}
-
-// Uncomment this line if the package provides a custom view component
-// registerElement('SquirrelChatUi', () => SquirrelChatUi);

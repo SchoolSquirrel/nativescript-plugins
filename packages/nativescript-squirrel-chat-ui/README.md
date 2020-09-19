@@ -11,3 +11,5 @@ ns plugin add @schoolsquirrel/nativescript-squirrel-chat-ui
 ## License
 
 MIT
+
+ | date:'shortTime'
