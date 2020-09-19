@@ -1,31 +1,31 @@
 <GridLayout rows="auto, *, auto" class="conversation-container">
-    <RadListView row="1" [items]="_messages">
-        <ng-template tkListItemTemplate let-item="item">
-            <FlexboxLayout class="messages">
-                <StackLayout [shadow]="2" cornerRadius="20" class="message-bubble" [class.continuation]="isContinuing(item)" [class.fromMe]="item.fromMe">
-                    <FlexboxLayout class="message-bubble-content">
-                        <GridLayout rows="auto, auto">
-                            <Label class="sendername" row="0" [visibility]="!isContinuing(item) && !item.fromMe ? 'visible' : 'hidden'" [text]="item.sender.name"></Label>
-                            <EmojiLabel class="message-text" row="1" [text]="item.text" textWrap="true"></EmojiLabel>
-                        </GridLayout>
+	<RadListView row="1" [items]="_messages">
+		<ng-template tkListItemTemplate let-item="item">
+			<FlexboxLayout class="messages">
+				<StackLayout [shadow]="2" cornerRadius="20" class="message-bubble" [class.continuation]="isContinuing(item)" [class.fromMe]="item.fromMe">
+					<FlexboxLayout class="message-bubble-content">
+						<GridLayout rows="auto, auto">
+							<Label class="sendername" row="0" *ngIf="!isContinuing(item) && !item.fromMe" [text]="item.sender.name"></Label>
+							<EmojiLabel class="message-text" row="1" [text]="item.text" textWrap="true"></EmojiLabel>
+						</GridLayout>
 
-                        <FlexboxLayout class="meta">
-                            <Label [text]="item.date" class="time"></Label>
-                            <Label [text]="getStatusIcon(item)" class="check fas"></Label>
-                        </FlexboxLayout>
-                    </FlexboxLayout>
-                </StackLayout>
-            </FlexboxLayout>
-        </ng-template>
-    </RadListView>
-    <GridLayout columns="*, auto" row="2" class="p-3">
-        <GridLayout col="0" columns="auto, *, auto" class="px-2 input-container">
-            <Button col="0" text="laugh" class="fas btn-icon btn-invisible btn-round m-0 p-0" (tap)="toggleEmojiPicker()"></Button>
-            <EmojiPicker (textChange)="onTextChange($event)" #messageInput col="1" class="m-x-5 m-y-0 message-input" hint="Type a message..."></EmojiPicker>
-            <Button col="2" text="paperclip" class="fas btn-invisible btn-round btn-icon m-0 p-0"></Button>
-        </GridLayout>
-        <Button col="1" [text]="canSendMesage ? 'paper-plane' : 'microphone'" (tap)="sendMessage()" class="fas btn-round btn-icon btn-send m-0 p-0"></Button>
-    </GridLayout>
+						<FlexboxLayout class="meta">
+							<Label [text]="item.date | date: 'shortTime'" class="time"></Label>
+							<Label [text]="getStatusIcon(item)" class="check fas"></Label>
+						</FlexboxLayout>
+					</FlexboxLayout>
+				</StackLayout>
+			</FlexboxLayout>
+		</ng-template>
+	</RadListView>
+	<GridLayout columns="*, auto" row="2" class="p-3">
+		<GridLayout col="0" columns="auto, *, auto" class="px-2 input-container">
+			<Button col="0" text="laugh" class="fas btn-icon btn-invisible btn-round m-0 p-0" (tap)="toggleEmojiPicker()"></Button>
+			<EmojiPicker (textChange)="onTextChange($event)" #messageInput col="1" class="m-x-5 m-y-0 message-input" hint="Type a message..."></EmojiPicker>
+			<Button col="2" text="paperclip" class="fas btn-invisible btn-round btn-icon m-0 p-0"></Button>
+		</GridLayout>
+		<Button col="1" [text]="canSendMesage ? 'paper-plane' : 'microphone'" (tap)="sendMessage()" class="fas btn-round btn-icon btn-send m-0 p-0"></Button>
+	</GridLayout>
 </GridLayout>
 
 <!-- 
