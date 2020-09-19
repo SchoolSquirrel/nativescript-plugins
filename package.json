@@ -1,7 +1,8 @@
 {
-	"name": "plugins",
-	"version": "0.0.0",
+	"name": "@schoolsquirrel/nativescript-plugins",
+	"version": "1.0.0",
 	"license": "MIT",
+	"description": "@SchoolSquirrel's NativeScript plugins ",
 	"scripts": {
 		"setup": "npx rimraf node_modules package-lock.json dist tmp && npm i && ts-patch install",
 		"start": "nps",
