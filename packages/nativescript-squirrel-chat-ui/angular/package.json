@@ -1,0 +1,16 @@
+{
+    "name": "nativescript-squirrel-chat-ui-angular",
+    "ngPackage": {
+        "lib": {
+            "entryFile": "index.ts",
+            "umdModuleIds": {
+                "@nativescript/core": "ns-core",
+                "@nativescript/angular": "ns-angular",
+                "@nativescript/nativescript-squirrel-chat-ui": "ns-squirrel-chat-ui"
+            }
+        },
+        "whitelistedNonPeerDependencies": [
+            "."
+        ]
+    }
+}

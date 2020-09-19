@@ -1,18 +1,18 @@
 {
-	"main": "app.js",
-	"description": "NativeScript Application",
-	"license": "SEE LICENSE IN <your-license-filename>",
-	"repository": "<fill-your-repository-here>",
-	"dependencies": {
-		"nativescript-theme-core": "file:../../node_modules/nativescript-theme-core",
-		"@nativescript/core": "file:../../node_modules/@nativescript/core",
-		"@schoolsquirrel/emoji-picker": "file:../../packages/emoji-picker",
-		"@schoolsquirrel/squirrel-chat-ui": "file:../../packages/squirrel-chat-ui"
-	},
-	"devDependencies": {
-		"@nativescript/android": "7.0.0",
-		"@nativescript/ios": "7.0.0",
-		"@nativescript/webpack": "3.0.4",
-		"typescript": "file:../../node_modules/typescript"
-	}
+    "main": "app.js",
+    "description": "NativeScript Application",
+    "license": "SEE LICENSE IN <your-license-filename>",
+    "repository": "<fill-your-repository-here>",
+    "dependencies": {
+        "nativescript-theme-core": "file:../../node_modules/nativescript-theme-core",
+        "@nativescript/core": "file:../../node_modules/@nativescript/core",
+        "@schoolsquirrel/emoji-picker": "file:../../packages/emoji-picker",
+        "@schoolsquirrel/nativescript-squirrel-chat-ui": "file:../../packages/nativescript-squirrel-chat-ui"
+    },
+    "devDependencies": {
+        "@nativescript/android": "7.0.0",
+        "@nativescript/ios": "7.0.0",
+        "@nativescript/webpack": "3.0.4",
+        "typescript": "file:../../node_modules/typescript"
+    }
 }

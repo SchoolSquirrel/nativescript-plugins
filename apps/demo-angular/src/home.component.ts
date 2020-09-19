@@ -14,8 +14,8 @@ export class HomeComponent {
 		{
 			name: 'nativescript-squirrel-chat-ui',
 		},
-		{
-			name: 'squirrel-chat-ui',
-		},
 	];
+	n(i) {
+		this.router.navigate(["/" + this.demos[i.index].name]);
+	}
 }
