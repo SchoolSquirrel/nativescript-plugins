@@ -6,8 +6,7 @@
     <StackLayout class="p-20">
         <ScrollView class="h-full">
           <StackLayout>
-            <Button text="Test squirrel-chat-ui" tap="{{ testIt }}" class="btn btn-primary"/>
-
+            <Label text="@SchoolSquirrel/nativescript-squirrel-chat-ui is an Angular only plugin!" textWrap="true"></Label>  
           </StackLayout>
         </ScrollView>
     </StackLayout>
