@@ -5,7 +5,7 @@ npm run setup
 npm start
 ```
 
-- @schoolsquirrel/emoji-picker
+- [@schoolsquirrel/emoji-picker](packages/emoji-picker)
 
 # How to use?
 
