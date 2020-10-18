@@ -6,6 +6,7 @@ npm start
 ```
 
 - [@schoolsquirrel/emoji-picker](packages/emoji-picker)
+- [@schoolsquirrel/letter-avatar](packages/letter-avatar)
 - [@schoolsquirrel/nativescript-squirrel-chat-ui](packages/nativescript-squirrel-chat-ui)
 
 # How to use?

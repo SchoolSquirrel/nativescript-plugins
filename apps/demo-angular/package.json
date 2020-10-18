@@ -16,7 +16,8 @@
 		"rxjs": "file:../../node_modules/rxjs",
 		"zone.js": "file:../../node_modules/zone.js",
 		"@schoolsquirrel/emoji-picker": "file:../../dist/packages/emoji-picker",
-		"@schoolsquirrel/nativescript-squirrel-chat-ui": "file:../../dist/packages/nativescript-squirrel-chat-ui"
+		"@schoolsquirrel/nativescript-squirrel-chat-ui": "file:../../dist/packages/nativescript-squirrel-chat-ui",
+		"@schoolsquirrel/letter-avatar": "file:../../dist/packages/letter-avatar"
 	},
 	"devDependencies": {
 		"@angular/compiler-cli": "file:../../node_modules/@angular/compiler-cli",

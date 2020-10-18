@@ -1,37 +1,40 @@
 {
-    "npmScope": "schoolsquirrel",
-    "affected": {
-        "defaultBase": "master"
-    },
-    "implicitDependencies": {
-        "workspace.json": "*",
-        "package.json": {
-            "dependencies": "*",
-            "devDependencies": "*"
-        },
-        "tsconfig.base.json": "*",
-        "tslint.json": "*",
-        "nx.json": "*"
-    },
-    "projects": {
-        "demo": {
-            "tags": []
-        },
-        "demo-angular": {
-            "tags": []
-        },
-        "all": {
-            "tags": []
-        },
-        "emoji-picker": {
-            "tags": []
-        },
-        "nativescript-squirrel-chat-ui": {
-            "tags": []
-        }
-    },
-    "workspaceLayout": {
-        "appsDir": "apps",
-        "libsDir": "packages"
-    }
+	"npmScope": "schoolsquirrel",
+	"affected": {
+		"defaultBase": "master"
+	},
+	"implicitDependencies": {
+		"workspace.json": "*",
+		"package.json": {
+			"dependencies": "*",
+			"devDependencies": "*"
+		},
+		"tsconfig.base.json": "*",
+		"tslint.json": "*",
+		"nx.json": "*"
+	},
+	"projects": {
+		"demo": {
+			"tags": []
+		},
+		"demo-angular": {
+			"tags": []
+		},
+		"all": {
+			"tags": []
+		},
+		"emoji-picker": {
+			"tags": []
+		},
+		"nativescript-squirrel-chat-ui": {
+			"tags": []
+		},
+		"letter-avatar": {
+			"tags": []
+		}
+	},
+	"workspaceLayout": {
+		"appsDir": "apps",
+		"libsDir": "packages"
+	}
 }

@@ -7,7 +7,8 @@
 		"nativescript-theme-core": "file:../../node_modules/nativescript-theme-core",
 		"@nativescript/core": "file:../../node_modules/@nativescript/core",
 		"@schoolsquirrel/emoji-picker": "file:../../packages/emoji-picker",
-		"@schoolsquirrel/nativescript-squirrel-chat-ui": "file:../../packages/nativescript-squirrel-chat-ui"
+		"@schoolsquirrel/nativescript-squirrel-chat-ui": "file:../../packages/nativescript-squirrel-chat-ui",
+		"@schoolsquirrel/letter-avatar": "file:../../packages/letter-avatar"
 	},
 	"devDependencies": {
 		"@nativescript/android": "7.0.0",

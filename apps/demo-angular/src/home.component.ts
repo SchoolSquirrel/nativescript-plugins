@@ -12,10 +12,13 @@ export class HomeComponent {
 			name: 'emoji-picker',
 		},
 		{
+			name: 'letter-avatar',
+		},
+		{
 			name: 'nativescript-squirrel-chat-ui',
 		},
 	];
 	n(i) {
-		this.router.navigate(["/" + this.demos[i.index].name]);
+		this.router.navigate(['/' + this.demos[i.index].name]);
 	}
 }
