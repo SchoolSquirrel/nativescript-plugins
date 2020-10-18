@@ -1,14 +1,21 @@
-<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page">
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="page" xmlns:la="@schoolsquirrel/letter-avatar">
     <Page.actionBar>
         <ActionBar title="letter-avatar" icon="" class="action-bar">
         </ActionBar>
     </Page.actionBar>
-    <StackLayout class="p-20">
-        <ScrollView class="h-full">
-          <StackLayout>
-            <Button text="Test letter-avatar" tap="{{ testIt }}" class="btn btn-primary"/>
-
-          </StackLayout>
-        </ScrollView>
-    </StackLayout>
+    <GridLayout rows="auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, auto">
+        <la:LetterAvatar row="0" text="AB" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></la:LetterAvatar>
+        <la:LetterAvatar row="1" text="CD" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></la:LetterAvatar>
+        <la:LetterAvatar row="2" text="EF" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></la:LetterAvatar>
+        <la:LetterAvatar row="3" text="GH" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></la:LetterAvatar>
+        <la:LetterAvatar row="4" text="IJ" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></la:LetterAvatar>
+        <la:LetterAvatar row="5" text="KL" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></la:LetterAvatar>
+        <la:LetterAvatar row="6" text="MN" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></la:LetterAvatar>
+        <la:LetterAvatar row="7" text="OP" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></la:LetterAvatar>
+        <la:LetterAvatar row="8" text="QR" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></la:LetterAvatar>
+        <la:LetterAvatar row="9" text="ST" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></la:LetterAvatar>
+        <la:LetterAvatar row="10" text="UV" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></la:LetterAvatar>
+        <la:LetterAvatar row="11" text="WX" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></la:LetterAvatar>
+        <la:LetterAvatar row="12" text="YZ" color="lightblue" padding="0" width="50" height="50" fontSize="20" borderRadius="10"></la:LetterAvatar>
+    </GridLayout>
 </Page>
