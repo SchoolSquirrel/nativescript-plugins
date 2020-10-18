@@ -1,5 +1,5 @@
 {
-	"main": "main.ts",
+	"main": "main.js",
 	"dependencies": {
 		"@angular/animations": "file:../../node_modules/@angular/animations",
 		"@angular/common": "file:../../node_modules/@angular/common",
