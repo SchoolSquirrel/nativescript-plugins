@@ -1,5 +1,4 @@
-import { Observable, EventData, Page, Frame } from '@nativescript/core';
-import { DemoSharedEmojiPicker } from '@demo/shared';
+import { EventData, Page, Frame } from '@nativescript/core';
 import { EmojiLabel, EmojiPicker } from '@schoolsquirrel/emoji-picker';
 
 export function navigatingTo(args: EventData) {
@@ -7,13 +6,13 @@ export function navigatingTo(args: EventData) {
 	page.bindingContext = new DemoModel();
 }
 
-export class DemoModel extends DemoSharedEmojiPicker {
-	public onButtonTap(args): void {
+export class DemoModel {
+	public onButtonTap(): void {
 		const page = Frame.topmost().currentPage;
 		(page.getViewById('myEmojiPicker') as EmojiPicker).togglePopup();
 	}
 
-	public onCopyBtnTap(args): void {
+	public onCopyBtnTap(): void {
 		const page = Frame.topmost().currentPage;
 		(page.getViewById('myEmojiLabel') as EmojiLabel).text = (page.getViewById('myEmojiPicker') as EmojiPicker).text;
 		return;
