@@ -6,7 +6,10 @@ import {} from '@schoolsquirrel/letter-avatar';
 	templateUrl: 'letter-avatar.component.html',
 })
 export class LetterAvatarComponent {
-	constructor(private _ngZone: NgZone) {}
-
-	ngOnInit() {}
+	public items: string[] = [
+        "AB", "CD", "EF", "GH", "IJ", "KL", "MN", "OP", "QR", "ST", "UV", "WX", "YZ",
+        "AB", "CD", "EF", "GH", "IJ", "KL", "MN", "OP", "QR", "ST", "UV", "WX", "YZ",
+        "AB", "CD", "EF", "GH", "IJ", "KL", "MN", "OP", "QR", "ST", "UV", "WX", "YZ",
+        "AB", "CD", "EF", "GH", "IJ", "KL", "MN", "OP", "QR", "ST", "UV", "WX", "YZ"
+    ];
 }
