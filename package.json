@@ -34,15 +34,5 @@
 		"rxjs": "~6.6.3",
 		"typescript": "~3.9.7",
 		"zone.js": "0.11.2"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"lint-staged": {
-		"**/*": [
-			"nx format:write --files"
-		]
 	}
 }
