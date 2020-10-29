@@ -9,9 +9,12 @@ import { NativeScriptCommonModule } from "@nativescript/angular";
     imports: [
         NativeScriptCommonModule,
     ],
+    exports: [
+        NativescriptSquirrelChatUiComponent
+    ],
     schemas: [
         NO_ERRORS_SCHEMA,
         CUSTOM_ELEMENTS_SCHEMA,
     ],
 })
-export class SquirrelChatUiModule {}
+export class NativeScriptSquirrelChatUiModule {}
