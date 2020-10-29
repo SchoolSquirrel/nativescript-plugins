@@ -29,11 +29,6 @@ export class NativescriptSquirrelChatUiComponent {
 
     public _messages: ObservableArray<Message> = new ObservableArray<Message>();
 
-    constructor() {
-        console.log("hi");
-        alert("hi");
-    }
-
     public goBack(): void {
         this.back.emit();
     }
