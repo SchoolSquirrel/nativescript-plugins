@@ -14,25 +14,30 @@ This plugin only supports NativeScript 7 or higher. In case you need to use an o
 
 Install the plugin from using `ns plugin add @schoolsquirrel/letter-avatar`.
 
+## Usage
 
-## Usage 
 ### NativeScript Core:
+
 Define the namespace
+
 ```xml
 <Page class="page"
     loaded="pageLoaded"
-    navigatingTo="onNavigatingTo" 
+    navigatingTo="onNavigatingTo"
     xmlns="http://schemas.nativescript.org/tns.xsd"
     xmlns:ns="@schoolsquirrel/letter-avatar">
 ```
+
 Use the plugin:
+
 ```xml
 <ns:LetterAvatar id="myAvatar" text="AB"></ns:LetterAvatar>
 ```
 
 You can also add custom styles:
+
 ```html
-<ns:LetterAvatar color="blue" padding="5" borderRadius="7" id="myAvatar" text="AB"></ns:LetterAvatar> 
+<ns:LetterAvatar color="blue" padding="5" borderRadius="7" id="myAvatar" text="AB"></ns:LetterAvatar>
 ```
 
 > Unfortunately, CSS properties are not supported.
@@ -42,10 +47,13 @@ For more info and examples check out the demo folder.
 ### Angular Version:
 
 In your `app.module.ts` include the library like so:
+
 ```typescript
-import { LetterAvatarModule } from "@schoolsquirrel/letter-avatar/angular";
+import { LetterAvatarModule } from '@schoolsquirrel/letter-avatar/angular';
 ```
+
 and add it to the imports array:
+
 ```typescript
 @NgModule({
     bootstrap:  [
@@ -66,11 +74,13 @@ export class AppModule { }
 ```
 
 The use it in your .html file:
+
 ```html
 <LetterAvatar text="AB"></LetterAvatar>
 ```
 
 You can add custom styles:
+
 ```html
 <LetterAvatar color="blue" padding="5" borderRadius="7" text="AB"></LetterAvatar>
 ```
@@ -78,7 +88,6 @@ You can add custom styles:
 > Unfortunately, CSS properties are not supported.
 
 For more info and examples check out the [demo](https://github.com/SchoolSquirrel/nativescript-plugins/tree/main/apps/demo/src/plugin-demos) and the [demo-angular](https://github.com/SchoolSquirrel/nativescript-plugins/tree/main/apps/demo-angular/src/plugin-demos) folder.
-
 
 ## License
 

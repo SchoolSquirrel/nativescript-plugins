@@ -1,11 +1,11 @@
 <ActionBar title="letter-avatar" class="action-bar"> </ActionBar>
 <GridLayout class="page">
-    <ListView [items]="items" class="list-group">
-        <ng-template let-item="item">
-            <GridLayout padding="5" columns="auto, *">
-                <LetterAvatar col="0" color="white" padding="0" width="50" height="50" fontSize="20" borderRadius="10" [text]="item"></LetterAvatar>
-                <Label col="1" text="Here could be a username." class="list-group-item"></Label>
-            </GridLayout>
-        </ng-template>
-    </ListView>
+	<ListView [items]="items" class="list-group">
+		<ng-template let-item="item">
+			<GridLayout padding="5" columns="auto, *">
+				<LetterAvatar col="0" color="white" padding="0" width="50" height="50" fontSize="20" borderRadius="10" [text]="item"></LetterAvatar>
+				<Label col="1" text="Here could be a username." class="list-group-item"></Label>
+			</GridLayout>
+		</ng-template>
+	</ListView>
 </GridLayout>

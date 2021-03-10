@@ -1,7 +1,7 @@
 {
 	"name": "@schoolsquirrel/emoji-picker",
 	"version": "1.0.0",
-	"description": "The first and only emoji picker for NativeScript!",
+	"description": "Add a plugin description",
 	"main": "index",
 	"typings": "index.d.ts",
 	"nativescript": {
@@ -12,23 +12,24 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/SchoolSquirrel/nativescript-plugins.git"
+		"url": "https://github.com/NativeScript/plugins.git"
 	},
 	"keywords": [
 		"NativeScript",
 		"JavaScript",
-		"Android",
-		"emoji",
-		"picker"
+		"TypeScript",
+		"iOS",
+		"Android"
 	],
 	"author": {
-		"name": "Hannes Rüger"
+		"name": "NativeScript",
+		"email": "oss@nativescript.org"
 	},
 	"bugs": {
-		"url": "https://github.com/SchoolSquirrel/nativescript-plugins/issues"
+		"url": "https://github.com/NativeScript/plugins/issues"
 	},
-	"license": "MIT",
-	"homepage": "https://github.com/SchoolSquirrel/nativescript-plugins/tree/main/packages/emoji-picker",
+	"license": "Apache-2.0",
+	"homepage": "https://github.com/NativeScript/plugins",
 	"readmeFilename": "README.md",
 	"bootstrapper": "@nativescript/plugin-seed"
 }

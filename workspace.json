@@ -73,7 +73,7 @@
 					"builder": "@nrwl/workspace:run-commands",
 					"outputs": ["dist/packages"],
 					"options": {
-						"commands": ["nx run emoji-picker:build.all", "nx run nativescript-squirrel-chat-ui:build.all", "nx run letter-avatar:build.all"],
+						"commands": [],
 						"parallel": false
 					}
 				},
@@ -88,10 +88,10 @@
 			}
 		},
 		"emoji-picker": {
-			"root": "packages/emoji-picker",
-			"sourceRoot": "packages/emoji-picker",
 			"projectType": "library",
 			"schematics": {},
+			"root": "packages/emoji-picker",
+			"sourceRoot": "packages/emoji-picker",
 			"architect": {
 				"build": {
 					"builder": "@nrwl/node:package",
@@ -114,7 +114,6 @@
 				},
 				"build.all": {
 					"builder": "@nrwl/workspace:run-commands",
-					"outputs": ["dist/packages"],
 					"options": {
 						"commands": ["nx run emoji-picker:build", "node tools/scripts/build-finish.ts emoji-picker"],
 						"parallel": false
@@ -122,7 +121,6 @@
 				},
 				"focus": {
 					"builder": "@nrwl/workspace:run-commands",
-					"outputs": ["dist/packages"],
 					"options": {
 						"commands": ["nx g @nativescript/plugin-tools:focus-packages emoji-picker"],
 						"parallel": false
@@ -130,54 +128,11 @@
 				}
 			}
 		},
-		"nativescript-squirrel-chat-ui": {
-			"root": "packages/nativescript-squirrel-chat-ui",
-			"sourceRoot": "packages/nativescript-squirrel-chat-ui",
+		"letter-avatar": {
 			"projectType": "library",
 			"schematics": {},
-			"architect": {
-				"build": {
-					"builder": "@nrwl/node:package",
-					"options": {
-						"outputPath": "dist/packages/nativescript-squirrel-chat-ui",
-						"tsConfig": "packages/nativescript-squirrel-chat-ui/tsconfig.json",
-						"packageJson": "packages/nativescript-squirrel-chat-ui/package.json",
-						"main": "packages/nativescript-squirrel-chat-ui/index.ts",
-						"assets": [
-							"packages/nativescript-squirrel-chat-ui/*.md",
-							"packages/nativescript-squirrel-chat-ui/index.d.ts",
-							"LICENSE",
-							{
-								"glob": "**/*",
-								"input": "packages/nativescript-squirrel-chat-ui/platforms/",
-								"output": "./platforms/"
-							}
-						]
-					}
-				},
-				"build.all": {
-					"builder": "@nrwl/workspace:run-commands",
-					"outputs": ["dist/packages"],
-					"options": {
-						"commands": ["nx run nativescript-squirrel-chat-ui:build", "node tools/scripts/build-finish.ts nativescript-squirrel-chat-ui"],
-						"parallel": false
-					}
-				},
-				"focus": {
-					"builder": "@nrwl/workspace:run-commands",
-					"outputs": ["dist/packages"],
-					"options": {
-						"commands": ["nx g @nativescript/plugin-tools:focus-packages nativescript-squirrel-chat-ui"],
-						"parallel": false
-					}
-				}
-			}
-		},
-		"letter-avatar": {
 			"root": "packages/letter-avatar",
 			"sourceRoot": "packages/letter-avatar",
-			"projectType": "library",
-			"schematics": {},
 			"architect": {
 				"build": {
 					"builder": "@nrwl/node:package",
@@ -200,7 +155,6 @@
 				},
 				"build.all": {
 					"builder": "@nrwl/workspace:run-commands",
-					"outputs": ["dist/packages"],
 					"options": {
 						"commands": ["nx run letter-avatar:build", "node tools/scripts/build-finish.ts letter-avatar"],
 						"parallel": false
@@ -208,9 +162,49 @@
 				},
 				"focus": {
 					"builder": "@nrwl/workspace:run-commands",
-					"outputs": ["dist/packages"],
 					"options": {
 						"commands": ["nx g @nativescript/plugin-tools:focus-packages letter-avatar"],
+						"parallel": false
+					}
+				}
+			}
+		},
+		"nativescript-squirrel-chat-ui": {
+			"projectType": "library",
+			"schematics": {},
+			"root": "packages/nativescript-squirrel-chat-ui",
+			"sourceRoot": "packages/nativescript-squirrel-chat-ui",
+			"architect": {
+				"build": {
+					"builder": "@nrwl/node:package",
+					"options": {
+						"outputPath": "dist/packages/nativescript-squirrel-chat-ui",
+						"tsConfig": "packages/nativescript-squirrel-chat-ui/tsconfig.json",
+						"packageJson": "packages/nativescript-squirrel-chat-ui/package.json",
+						"main": "packages/nativescript-squirrel-chat-ui/index.ts",
+						"assets": [
+							"packages/nativescript-squirrel-chat-ui/*.md",
+							"packages/nativescript-squirrel-chat-ui/index.d.ts",
+							"LICENSE",
+							{
+								"glob": "**/*",
+								"input": "packages/nativescript-squirrel-chat-ui/platforms/",
+								"output": "./platforms/"
+							}
+						]
+					}
+				},
+				"build.all": {
+					"builder": "@nrwl/workspace:run-commands",
+					"options": {
+						"commands": ["nx run nativescript-squirrel-chat-ui:build", "node tools/scripts/build-finish.ts nativescript-squirrel-chat-ui"],
+						"parallel": false
+					}
+				},
+				"focus": {
+					"builder": "@nrwl/workspace:run-commands",
+					"options": {
+						"commands": ["nx g @nativescript/plugin-tools:focus-packages nativescript-squirrel-chat-ui"],
 						"parallel": false
 					}
 				}

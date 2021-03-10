@@ -1,12 +1,12 @@
 {
-	"name": "nativescript-emoji-picker-angular",
+	"name": "schoolsquirrel-emoji-picker-angular",
 	"ngPackage": {
 		"lib": {
 			"entryFile": "index.ts",
 			"umdModuleIds": {
 				"@nativescript/core": "ns-core",
 				"@nativescript/angular": "ns-angular",
-				"@nativescript/emoji-picker": "ns-emoji-picker"
+				"@schoolsquirrel/emoji-picker": "ns-emoji-picker"
 			}
 		},
 		"whitelistedNonPeerDependencies": [

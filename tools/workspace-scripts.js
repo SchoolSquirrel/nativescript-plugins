@@ -57,12 +57,12 @@ module.exports = {
 			},
 		},
 		'⚙️': {
-			script: `npx cowsay "@schoolsquirrel/* packages will keep your ⚙️ cranking"`,
-			description: '_____________  @schoolsquirrel/*  _____________',
+			script: `npx cowsay "@school-squirrel/* packages will keep your ⚙️ cranking"`,
+			description: '_____________  @school-squirrel/*  _____________',
 		},
 		// packages
 		// build output is always in dist/packages
-		'@schoolsquirrel': {
+		'@school-squirrel': {
 			// @schoolsquirrel/emoji-picker
 			'emoji-picker': {
 				build: {
@@ -70,18 +70,18 @@ module.exports = {
 					description: '@schoolsquirrel/emoji-picker: Build',
 				},
 			},
-			// @schoolsquirrel/nativescript-squirrel-chat-ui
-			'nativescript-squirrel-chat-ui': {
-				build: {
-					script: 'nx run nativescript-squirrel-chat-ui:build.all',
-					description: '@schoolsquirrel/nativescript-squirrel-chat-ui: Build',
-				},
-			},
 			// @schoolsquirrel/letter-avatar
 			'letter-avatar': {
 				build: {
 					script: 'nx run letter-avatar:build.all',
 					description: '@schoolsquirrel/letter-avatar: Build',
+				},
+			},
+			// @schoolsquirrel/nativescript-squirrel-chat-ui
+			'nativescript-squirrel-chat-ui': {
+				build: {
+					script: 'nx run nativescript-squirrel-chat-ui:build.all',
+					description: '@schoolsquirrel/nativescript-squirrel-chat-ui: Build',
 				},
 			},
 			'build-all': {
@@ -98,13 +98,13 @@ module.exports = {
 				script: 'nx run emoji-picker:focus',
 				description: 'Focus on @schoolsquirrel/emoji-picker',
 			},
-			'nativescript-squirrel-chat-ui': {
-				script: 'nx run nativescript-squirrel-chat-ui:focus',
-				description: 'Focus on @schoolsquirrel/nativescript-squirrel-chat-ui',
-			},
 			'letter-avatar': {
 				script: 'nx run letter-avatar:focus',
 				description: 'Focus on @schoolsquirrel/letter-avatar',
+			},
+			'nativescript-squirrel-chat-ui': {
+				script: 'nx run nativescript-squirrel-chat-ui:focus',
+				description: 'Focus on @schoolsquirrel/nativescript-squirrel-chat-ui',
 			},
 			reset: {
 				script: 'nx run all:focus',

@@ -14,10 +14,6 @@ const TerserPlugin = require('terser-webpack-plugin');
 const hashSalt = Date.now().toString();
 
 module.exports = (env) => {
-	// Add your custom Activities, Services and other Android app components here.
-	const appComponents = env.appComponents || [];
-	appComponents.push(...['@nativescript/core/ui/frame', '@nativescript/core/ui/frame/activity']);
-
 	const platform = env && ((env.android && 'android') || (env.ios && 'ios') || env.platform);
 	if (!platform) {
 		throw new Error('You need to provide a target platform!');
@@ -50,9 +46,12 @@ module.exports = (env) => {
 		unitTesting, // --env.unitTesting,
 		testing, // --env.testing
 		verbose, // --env.verbose
+		ci, // --env.ci
 		snapshotInDocker, // --env.snapshotInDocker
 		skipSnapshotTools, // --env.skipSnapshotTools
 		compileSnapshot, // --env.compileSnapshot
+		appComponents = [],
+		entries = {},
 	} = env;
 
 	const useLibs = compileSnapshot;
@@ -69,6 +68,7 @@ module.exports = (env) => {
 	const alias = env.alias || {};
 	alias['~/package.json'] = resolve(projectRoot, 'package.json');
 	alias['~'] = appFullPath;
+	alias['@demo/shared'] = resolve(projectRoot, '..', '..', 'tools', 'demo');
 
 	if (hasRootLevelScopedModules) {
 		coreModulesPackageName = '@nativescript/core';
@@ -80,14 +80,13 @@ module.exports = (env) => {
 
 	const entryModule = nsWebpack.getEntryModule(appFullPath, platform);
 	const entryPath = `.${sep}${entryModule}.ts`;
-	const entries = env.entries || {};
-	entries.bundle = entryPath;
+	Object.assign(entries, { bundle: entryPath }, entries);
 
 	const tsConfigPath = resolve(projectRoot, 'tsconfig.json');
 
 	const areCoreModulesExternal = Array.isArray(env.externals) && env.externals.some((e) => e.indexOf('@nativescript') > -1);
 	if (platform === 'ios' && !areCoreModulesExternal && !testing) {
-		entries['tns_modules/@nativescript/core/inspector_modules'] = 'inspector_modules';
+		entries['tns_modules/inspector_modules'] = '@nativescript/core/inspector_modules';
 	}
 
 	let sourceMapFilename = nsWebpack.getSourceMapFilename(hiddenSourceMap, __dirname, dist);
@@ -99,6 +98,9 @@ module.exports = (env) => {
 	}
 
 	const noEmitOnErrorFromTSConfig = getNoEmitOnErrorFromTSConfig(tsConfigPath);
+
+	// Add your custom Activities, Services and other android app components here.
+	appComponents.push('@nativescript/core/ui/frame', '@nativescript/core/ui/frame/activity');
 
 	nsWebpack.processAppComponents(appComponents, platform);
 	const config = {
@@ -164,7 +166,7 @@ module.exports = (env) => {
 			minimizer: [
 				new TerserPlugin({
 					parallel: true,
-					cache: true,
+					cache: !ci,
 					sourceMap: isAnySourceMapEnabled,
 					terserOptions: {
 						output: {
@@ -176,7 +178,18 @@ module.exports = (env) => {
 							// when these options are enabled
 							collapse_vars: platform !== 'android',
 							sequences: platform !== 'android',
+							// For v8 Compatibility
+							keep_infinity: true, // for V8
+							reduce_funcs: false, // for V8
+							// custom
+							drop_console: production,
+							drop_debugger: true,
+							global_defs: {
+								__UGLIFIED__: true,
+							},
 						},
+						// Required for Element Level CSS, Observable Events, & Android Frame
+						keep_classnames: true,
 					},
 				}),
 			],
@@ -258,14 +271,7 @@ module.exports = (env) => {
 				verbose: !!verbose,
 			}),
 			// Copy assets
-			new CopyWebpackPlugin({
-				patterns: [
-					{ from: 'assets/**', noErrorOnMissing: true, globOptions: { dot: false, ...copyIgnore } },
-					{ from: 'fonts/**', noErrorOnMissing: true, globOptions: { dot: false, ...copyIgnore } },
-					{ from: '**/*.jpg', noErrorOnMissing: true, globOptions: { dot: false, ...copyIgnore } },
-					{ from: '**/*.png', noErrorOnMissing: true, globOptions: { dot: false, ...copyIgnore } },
-				],
-			}),
+			new CopyWebpackPlugin([{ from: { glob: 'assets/**', dot: false } }, { from: { glob: 'fonts/**', dot: false } }, { from: { glob: '**/*.jpg', dot: false } }, { from: { glob: '**/*.png', dot: false } }], copyIgnore),
 			new nsWebpack.GenerateNativeScriptEntryPointsPlugin('bundle'),
 			// For instructions on how to set up workers with webpack
 			// check out https://github.com/nativescript/worker-loader

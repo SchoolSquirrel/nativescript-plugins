@@ -2,10 +2,9 @@ import { Component, NgZone } from '@angular/core';
 
 @Component({
 	selector: 'demo-squirrel-chat-ui',
-	templateUrl: 'squirrel-chat-ui.component.html',
+	templateUrl: 'nativescript-squirrel-chat-ui.component.html',
 })
-export class SquirrelChatUiComponent {
-
+export class NativescriptSquirrelChatUiComponent {
 	constructor(private _ngZone: NgZone) {}
 
 	ngOnInit() {

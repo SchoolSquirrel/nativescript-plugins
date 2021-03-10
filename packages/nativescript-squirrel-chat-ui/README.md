@@ -12,4 +12,4 @@ ns plugin add @schoolsquirrel/nativescript-squirrel-chat-ui
 
 MIT
 
- | date:'shortTime'
+| date:'shortTime'

@@ -1,36 +1,38 @@
 ﻿@import '~nativescript-theme-core/css/core.light.css';
 
 .fas {
-    font-family: "Font Awesome 5 Free", "fa-solid-900";
-    font-weight: 900;
+	font-family: 'Font Awesome 5 Free', 'fa-solid-900';
+	font-weight: 900;
 }
 
 .far {
-    font-family: "Font Awesome 5 Free", "fa-regular-400";
-    font-weight: 400;
+	font-family: 'Font Awesome 5 Free', 'fa-regular-400';
+	font-weight: 400;
 }
 
 .fab {
-    font-family: "Font Awesome 5 Free", "fa-brands-400";
-    font-weight: 400;
+	font-family: 'Font Awesome 5 Free', 'fa-brands-400';
+	font-weight: 400;
 }
 
-button, label, stack-layout {
-    horizontal-align: center;
+button,
+label,
+stack-layout {
+	horizontal-align: center;
 }
 
 button {
-    font-size: 36;
+	font-size: 36;
 }
 
 .title {
-    font-size: 30;
-    margin: 20;
+	font-size: 30;
+	margin: 20;
 }
 
 .message {
-    font-size: 20;
-    color: #284848;
-    text-align: center;
-    margin: 0 20;
-} 
+	font-size: 20;
+	color: #284848;
+	text-align: center;
+	margin: 0 20;
+}

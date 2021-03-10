@@ -1,7 +1,7 @@
 {
 	"name": "@schoolsquirrel/letter-avatar",
 	"version": "1.0.0",
-	"description": "Generate beautiful letter avatars in your NativeScript app!",
+	"description": "Add a plugin description",
 	"main": "index",
 	"typings": "index.d.ts",
 	"nativescript": {
@@ -12,24 +12,24 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/SchoolSquirrel/nativescript-plugins.git"
+		"url": "https://github.com/NativeScript/plugins.git"
 	},
 	"keywords": [
 		"NativeScript",
-		"Angular",
-		"Core",
-		"customizable",
-		"avatars",
-		"letters"
+		"JavaScript",
+		"TypeScript",
+		"iOS",
+		"Android"
 	],
 	"author": {
-		"name": "Hannes Rüger"
+		"name": "NativeScript",
+		"email": "oss@nativescript.org"
 	},
 	"bugs": {
-		"url": "https://github.com/SchoolSquirrel/nativescript-plugins"
+		"url": "https://github.com/NativeScript/plugins/issues"
 	},
-	"license": "MIT",
-	"homepage": "https://github.com/SchoolSquirrel/nativescript-plugins",
+	"license": "Apache-2.0",
+	"homepage": "https://github.com/NativeScript/plugins",
 	"readmeFilename": "README.md",
 	"bootstrapper": "@nativescript/plugin-seed"
 }

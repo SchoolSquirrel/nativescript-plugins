@@ -1,5 +1,5 @@
 {
-	"name": "nativescript-letter-avatar-angular",
+	"name": "schoolsquirrel-letter-avatar-angular",
 	"ngPackage": {
 		"lib": {
 			"entryFile": "index.ts",

@@ -3,4 +3,4 @@ node_js:
   - "node"
 script:
 - npm run setup
-- npm start @schoolsquirrel.build-all
+- npm start @school-squirrel.build-all

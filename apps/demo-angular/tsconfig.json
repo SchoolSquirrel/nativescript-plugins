@@ -1,25 +1,14 @@
 {
-  "extends": "../../tsconfig.base.json",
-  "compilerOptions": {
-    "rootDirs": [
-      ".",
-      "../.."
-    ],
-    "baseUrl": ".",
-    "paths": {
-      "~/*": [
-        "src/*"
-      ],
-      "@demo/shared": [
-        "../../tools/demo/index.ts"
-      ],
-      "@schoolsquirrel/*": [
-        "../../dist/packages/*"
-      ]
-    }
-  },
-  "files": [
-    "./references.d.ts",
-    "./src/main.ts"
-  ]
+	"extends": "../../tsconfig.base.json",
+	"compilerOptions": {
+		"rootDirs": [".", "../.."],
+		"baseUrl": ".",
+		"paths": {
+			"~/*": ["src/*"],
+			"@demo/shared": ["../../tools/demo/index.ts"],
+			"@school-squirrel/*": ["../../dist/packages/*"],
+			"@schoolsquirrel/*": ["../../dist/packages/*"]
+		}
+	},
+	"files": ["./references.d.ts", "./src/main.ts"]
 }

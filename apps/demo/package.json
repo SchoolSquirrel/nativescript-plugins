@@ -6,14 +6,14 @@
 	"dependencies": {
 		"nativescript-theme-core": "file:../../node_modules/nativescript-theme-core",
 		"@nativescript/core": "file:../../node_modules/@nativescript/core",
-		"@schoolsquirrel/emoji-picker": "file:../../dist/packages/emoji-picker",
-		"@schoolsquirrel/nativescript-squirrel-chat-ui": "file:../../dist/packages/nativescript-squirrel-chat-ui",
-		"@schoolsquirrel/letter-avatar": "file:../../dist/packages/letter-avatar"
+		"@schoolsquirrel/emoji-picker": "file:../../packages/emoji-picker",
+		"@schoolsquirrel/letter-avatar": "file:../../packages/letter-avatar",
+		"@schoolsquirrel/nativescript-squirrel-chat-ui": "file:../../packages/nativescript-squirrel-chat-ui"
 	},
 	"devDependencies": {
-		"@nativescript/android": "7.0.0",
-		"@nativescript/ios": "7.0.3",
-		"@nativescript/webpack": "3.0.7",
+		"@nativescript/android": "7.0.1",
+		"@nativescript/ios": "7.2.0",
+		"@nativescript/webpack": "~4.1.0",
 		"typescript": "file:../../node_modules/typescript"
 	}
 }

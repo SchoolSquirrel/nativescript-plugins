@@ -1,13 +1,7 @@
-# @schoolsquirrel/\* plugins
-
-```
-npm run setup
-npm start
-```
-
-- [@schoolsquirrel/emoji-picker](packages/emoji-picker)
-- [@schoolsquirrel/letter-avatar](packages/letter-avatar)
-- [@schoolsquirrel/nativescript-squirrel-chat-ui](packages/nativescript-squirrel-chat-ui)
+- @schoolsquirrel/emoji-picker
+- @schoolsquirrel/letter-avatar
+- @schoolsquirrel/nativesceript-squirrel-chat-ui
+- @schoolsquirrel/nativescript-squirrel-chat-ui
 
 # How to use?
 

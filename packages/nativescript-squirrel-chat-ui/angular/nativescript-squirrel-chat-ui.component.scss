@@ -1,6 +1,6 @@
 .conversation-container {
-    background-color: rgb(235, 235, 235);
-    /*.message {
+	background-color: rgb(235, 235, 235);
+	/*.message {
         margin-right: 100;
         background-color: #ffffff;
         &.fromMe {
@@ -15,71 +15,71 @@
 }
 
 .messages {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0 10 5 10;
-    .message-bubble {
-        margin: 10 15 0 0;
-        padding: 0;
-        &.fromMe {
-            align-self: flex-end;
-            margin-right: 0;
-            margin-left: 15;
-            .message-bubble-content {
-                background-color: #dcf8c6;
-            }
-        }
-        &.continuation {
-            margin-top: 0;
-        }
-        .message-bubble-content {
-            align-items: flex-start;
-            flex-wrap: wrap;
-            justify-content: flex-end;
-            border-radius: 8;
-            background-color: white;
-            .sendername {
-                display: block;
-                color: #F07C41;
-                font-weight: bold;
-            }
-            .message-text {
-                color: #000000;
-                font-size: 15;
-                margin: 5;
-            }
-            .meta {
-                align-self: flex-end;
-                justify-content: flex-end;
-                margin: 0 5 5 5;
-                .time {
-                    font-size: 13;
-                    opacity: 0.7;
-                    margin-right: 5;
-                    &.ios {
-                        font-size: 11;
-                        opacity: 0.4;
-                    }
-                }
-                .check {
-                    font-size: 14;
-                    padding-top: 2;
-                    margin-left: -4;
-                    &.blue {
-                        color: #52c5f7;
-                    }
-                }
-            }
-        }
-    }
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0 10 5 10;
+	.message-bubble {
+		margin: 10 15 0 0;
+		padding: 0;
+		&.fromMe {
+			align-self: flex-end;
+			margin-right: 0;
+			margin-left: 15;
+			.message-bubble-content {
+				background-color: #dcf8c6;
+			}
+		}
+		&.continuation {
+			margin-top: 0;
+		}
+		.message-bubble-content {
+			align-items: flex-start;
+			flex-wrap: wrap;
+			justify-content: flex-end;
+			border-radius: 8;
+			background-color: white;
+			.sendername {
+				display: block;
+				color: #f07c41;
+				font-weight: bold;
+			}
+			.message-text {
+				color: #000000;
+				font-size: 15;
+				margin: 5;
+			}
+			.meta {
+				align-self: flex-end;
+				justify-content: flex-end;
+				margin: 0 5 5 5;
+				.time {
+					font-size: 13;
+					opacity: 0.7;
+					margin-right: 5;
+					&.ios {
+						font-size: 11;
+						opacity: 0.4;
+					}
+				}
+				.check {
+					font-size: 14;
+					padding-top: 2;
+					margin-left: -4;
+					&.blue {
+						color: #52c5f7;
+					}
+				}
+			}
+		}
+	}
 }
 
 .input-container {
-    background-color: #fff;
-    border-radius: 50;
+	background-color: #fff;
+	border-radius: 50;
 }
 
 .btn-send {
-    background-color: #F07C41;
-    color: #fff;
+	background-color: #f07c41;
+	color: #fff;
 }
